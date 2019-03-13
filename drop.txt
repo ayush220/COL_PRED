@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>dropdown</title>
+</head>
+<body>
+<div>
+<form action="#" method="post" id="demoForm" class="demoForm">
+    <fieldset>
+        <legend>Demo: Get Selected Options</legend>
+		<p>
+<input list="suggestions" style="width: 500px;" autocomplete="on">
+    <datalist id="suggestions" name="suggestions" multiple>
+        <option value="Indian Institute of Technology Powai CS">Indian Institute of Technology Powai CS</option>
+        <option value="Indian Institute of Technology Powai ece">Indian Institute of Technology Powai ECE</option>
+		<option value="Indian Institute of Technology Powai meta">Indian Institute of Technology Powai Meta</option>
+		<option value="Indian Institute of Technology Powai mech">Indian Institute of Technology Powai Mech</option>
+		<option value="Indian Institute of Technology Powai Chem">Indian Institute of Technology Powai Chem</option>
+		<option value="Indian Institute of Technology Powai mining">Indian Institute of Technology Powai Mining</option>
+		<option value="Indian Institute of Technology Powai aero">Indian Institute of Technology Powai Aero</option>
+		<option value="Indian Institute of Technology Powai biotech">Indian Institute of Technology Powai Biotech</option>
+		<option value="Indian Institute of Technology Powai phy">Indian Institute of Technology Powai phy</option>
+		<option value="Indian Institute of Technology Powai civil">Indian Institute of Technology Powai civil</option>
+		<option value="Indian Institute of Technology Delhi CS">Indian Institute of Technology Delhi CS</option>
+		<option value="Indian Institute of Technology Delhi ece">Indian Institute of Technology Delhi ECE</option>
+		<option value="Indian Institute of Technology Delhi chem">Indian Institute of Technology Delhi chem</option>
+		<option value="Indian Institute of Technology Delhi mech">Indian Institute of Technology Delhi mech</option>
+		<option value="Indian Institute of Technology Delhi civil">Indian Institute of Technology Delhi civil</option>
+		<option value="Indian Institute of Technology Delhi phy">Indian Institute of Technology Delhi phy</option>
+		<option value="National Institute of Technology Trichy CS">National Institute of Technology Trichy CS</option>
+		<option value="National Institute of Technology Trichy ece">National Institute of Technology Trichy ECE</option>
+		<option value="National Institute of Technology Trichy mech">National Institute of Technology Trichy Mech</option>
+		<option value="National Institute of Technology Trichy chem">National Institute of Technology Trichy chem</option>
+		<option value="National Institute of Technology Trichy Civil">National Institute of Technology Trichy civil</option>
+		<option value="National Institute of Technology Trichy prod">National Institute of Technology Trichy Prod</option>
+		<option value="National Institute of Technology Surathkal cse">National Institute of Technology Surathkal CSE</option>
+		<option value="National Institute of Technology Surathkal ece">National Institute of Technology Surathkal ECE</option>
+		<option value="National Institute of Technology Surathkal eee">National Institute of Technology Surathkal EEE</option>
+		<option value="National Institute of Technology Surathkal it">National Institute of Technology Surathkal IT</option>
+		<option value="National Institute of Technology Surathkal chem">National Institute of Technology Surathkal CHEM</option>
+		<option value="National Institute of Technology Surathkal mech">National Institute of Technology Surathkal Mech</option>
+		<option value="National Institute of Technology Surathkal meta">National Institute of Technology Surathkal meta</option>
+		<option value="National Institute of Technology Surathkal mining">National Institute of Technology Surathkal mining</option>
+		<option value="National Institute of Technology Surathkal civil">National Institute of Technology Surathkal civil</option>
+    </datalist>
+	<button type="button" onclick="func()">Move right</button>
+            
+            
+            <button type="button" onclick="func2()">Move left</button>
+            
+            
+            <input type="submit" value="Submit" />
+          <!--  <textarea name="display" id="display" placeholder="Enter colleges" cols="20" rows="4"></textarea>-->
+	<datalist id="display">
+	<option value=""></option></datalist>	  
+        </p>
+        
+    </fieldset>
+</form>
+<p id="demo"></p>
+
+<script>
+            
+        function func(){
+        var x=document.getElementById('suggestions').selectedIndex;
+       
+            document.getElementsByTagName("option")[x].style.visibility="hidden";
+            document.getElementById('display').innerHTML+=document.getElementsByTagName("option")[x].value + "\n";
+    }  
+    
+    function func2(){
+        
+    }
+    
+</script>
+</div>
+</body>
+</html>
